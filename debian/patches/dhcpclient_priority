@@ -1,0 +1,12 @@
+Index: blueman-1.23/blueman/plugins/applet/DhcpClient.py
+===================================================================
+--- blueman-1.23.orig/blueman/plugins/applet/DhcpClient.py	2011-05-21 17:05:31.000000000 +0200
++++ blueman-1.23/blueman/plugins/applet/DhcpClient.py	2012-09-25 14:40:22.904181456 +0200
+@@ -26,6 +26,7 @@
+ 	__description__ = _("Provides a basic dhcp client for Bluetooth PAN connections.")
+ 	__icon__= "network"
+ 	__author__ = "Walmis"
++	__priority__ = 3
+ 	
+ 	def on_load(self, applet):
+ 		self.Signals = SignalTracker()

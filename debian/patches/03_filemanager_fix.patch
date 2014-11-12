@@ -1,0 +1,24 @@
+Description: fix file manager access
+ This makes blueman look at more filemanagers than just thunar and nautilus
+Bug: https://bugs.launchpad.net/bugs/1001648
+
+---
+ apps/blueman-browse |    7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+--- a/apps/blueman-browse
++++ b/apps/blueman-browse
+@@ -48,7 +48,12 @@ class Browse:
+             conf.props.browse_command = DEF_BROWSE_COMMAND
+         if "nautilus" in DEF_BROWSE_COMMAND:
+             if not have("nautilus"):
+-                conf.props.browse_command = "thunar obex://[%d]"
++					if have("thunar"):
++						conf.props.browse_command = "thunar obex://[%d]"
++					elif have ("pcmanfm"):
++						conf.props.browse_command = "pcmanfm obex://[%d]"
++					else:
++						conf.props.browse_command = "xdg-open obex://[%d]"
+ 
+         cmd = conf.props.browse_command.replace("%d", addr)
+         args = cmd.split(" ")

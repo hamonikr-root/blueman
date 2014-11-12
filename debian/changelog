@@ -1,0 +1,157 @@
+blueman (1.23-git201403102151-1ubuntu1) trusty; urgency=medium
+
+  * Merge from debian unstable. Remaining changes:
+    - debian/patches/01_dont_autostart_lxde.patch:
+      + Don't autostart the applet in LXDE
+    - debian/patches/02_dont_crash_on_non-bluetooth_card.patch:
+      + Avoid crashing when receiving event for cards blueman shouldn't handle
+    - debian/control: Don't depend on python-appindicator
+    - debian/patches/03_filemanager_fix.patch:
+      + Add support for more filemanagers
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 09 Apr 2014 16:54:36 +1000
+
+blueman (1.23-git201403102151-1) unstable; urgency=low
+
+  * New upstream snapshot (Closes: #741174)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Mon, 10 Mar 2014 22:01:00 +0100
+
+blueman (1.23-git201312311147-1ubuntu1) trusty; urgency=medium
+
+  * Merge from debian unstable. Remaining changes:
+    - debian/patches/01_dont_autostart_lxde.patch:
+      + Don't autostart the applet in LXDE
+    - debian/patches/02_dont_crash_on_non-bluetooth_card.patch:
+      + Avoid crashing when receiving event for cards blueman shouldn't handle
+    - debian/control: Don't depend on python-appindicator
+    - debian/patches/03_filemanager_fix.patch:
+      + Add support for more filemanagers 
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Tue, 21 Jan 2014 08:54:58 +1100
+
+blueman (1.23-git201312311147-1) unstable; urgency=low
+
+  * Snapshot from (new :)) upstream repository (Closes: #674519, #705859,
+                                                #719747, #682848, #680757)
+  * Remaining patch: dhcpclient_priority
+
+ -- Christopher Schramm <debian@shakaweb.org>  Tue, 31 Dec 2013 11:47:00 +0100
+
+blueman (1.23+update1-2ubuntu1) saucy; urgency=low
+
+  * Merge from debian unstable. Remaining changes:
+    - debian/patches/01_dont_autostart_lxde.patch:
+      + Don't autostart the applet in LXDE
+    - debian/patches/02_dont_crash_on_non-bluetooth_card.patch:
+      + Avoid crashing when receiving event for cards blueman shouldn't handle
+    - debian/control: Don't depend on python-appindicator
+  * Add debian/patches/03_filemanager_fix.patch (LP: #1001648)
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 14 Aug 2013 07:56:24 +1000
+
+blueman (1.23+update1-2) unstable; urgency=low
+
+  * Add libpulse-mainloop-glib0 to dependencies (Closes: #706121)
+  * Fix python dependency for dh_python2 (Closes: #714895)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Fri, 26 Jul 2013 23:57:00 +0200
+
+blueman (1.23+update1-1ubuntu1) saucy; urgency=low
+
+  * Sync with Debian (LP: #1010606, #1037216). Remaining changes:
+    - debian/patches/01_dont_autostart_lxde.patch:
+      + Don't autostart the applet in LXDE
+    - debian/patches/02_dont_crash_on_non-bluetooth_card.patch:
+      + Avoid crashing when receiving event for cards blueman shouldn't handle
+  * debian/control: Don't depend on python-appindicator
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 03 Jul 2013 21:40:14 -0400
+
+blueman (1.23+update1-1) unstable; urgency=low
+
+  * Slight upstream changes (Closes: #691655)
+  * Add patch python string exception (Closes: #585212)
+  * Prefer DhcpClient plugin over NMPANSupport
+  * Add README.Debian to point out the state of the NetworkManager integration
+    (Closes: #700987, #603355)
+  * Apply patch for python multiarch support (Closes: #697556)
+  * Add patch for pulse audio version check (Closes: #656742, #702037)
+  * Add patch for nautilus command (Closes: #667030)
+  * Add patch for homepage URL (Closes: #700986)
+  * Remove /var/lib/blueman/network.state after purge (Closes: #700992)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Tue, 16 Apr 2013 08:35:00 +0200
+
+blueman (1.23-1) unstable; urgency=low
+
+  * New upstream release (Closes: #663120)
+  * Replaced python-central by dh_python2
+  * Added dependency for gnome-icon-theme (Closes: #631838)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Wed, 21 Mar 2012 11:15:00 +0200
+
+blueman (1.22~bzr707-1) experimental; urgency=low
+
+  * Updated to revision 707 (Closes: #553326, #563758, #587674, #603357,
+    #607692)
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Merged the NMU (Closes: #592077, #588019)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Tue, 21 Dec 2010 09:20:00 +0200
+
+blueman (1.21-4.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * add ${python:depends}. (Closes: 592077, 588019)
+      + Thanks Jakub Wilk for the patch
+ -- Mike O'Connor <stew@debian.org>  Wed, 25 Aug 2010 22:12:19 -0400
+
+blueman (1.21-4) unstable; urgency=low
+
+  * Removed hardcoded python versions (Closes: #582649)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Fri, 25 Jun 2010 12:05:00 +0200
+
+blueman (1.21-3) unstable; urgency=high
+
+  * Re-enabled network manager 0.8 support (Closes: #569536)
+  * Added dependency on hicolor-icon-theme (Closes: #569742)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Mon, 15 Feb 2010 12:55:00 +0200
+ 
+blueman (1.21-2) unstable; urgency=low
+
+  * Added dependency librsvg2-common (Closes: #557336)
+  * Compiled for network manager 0.7 (Closes: #553927)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Fri, 08 Jan 2010 18:35:00 +0200
+
+blueman (1.21-1) unstable; urgency=low
+
+  * Changed dependency python-gnome2 to python-gconf (Closes: #541579)
+  * New upstream release (Closes: #541301, #549496, #551033)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Sun, 25 Oct 2009 17:55:00 +0200
+
+blueman (1.10-3) unstable; urgency=low
+
+  * Removed unnecessary python-pyrex runtime dependency (Closes: #532108)
+  * Removed false conflicts statement for gnome-bluetooth (Closes: #532107)
+  * Added build dependency python2.6-dev optional to python2.5-dev
+  * Added missing hal dependency
+  * Increased minimal version of to python-gtk2 to 2.14 (Closes: #535071)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Mon, 29 Jun 2009 16:22:00 +0200 
+
+blueman (1.10-2) unstable; urgency=low
+
+  * First release for unstable
+
+ -- Christopher Schramm <debian@shakaweb.org>  Fri, 05 Jun 2009 16:56:26 +0200
+
+blueman (1.10-1) experimental; urgency=low
+
+  * Initial release (Closes: #517614)
+
+ -- Christopher Schramm <debian@shakaweb.org>  Fri, 24 Mar 2009 18:50:00 +0200
